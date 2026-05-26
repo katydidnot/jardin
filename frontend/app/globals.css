@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+/* ════════════════════════════════════════════════════════════════════════════
+   JARDIN — 70s Earthy Avocado Design System
+   ════════════════════════════════════════════════════════════════════════════
+   Palette anchor: #336516 at green-900 (brand primary).
+   The palette is inspired by 1970s avocado-and-harvest-gold interiors:
+   creamy parchment backgrounds, olive-avocado greens, warm earth tones.
+
+   green-400 (#6aac25) is the iconic avocado-skin colour — the quintessential
+   70s shade you'd find on a kitchen appliance or shag carpet.
+   ──────────────────────────────────────────────────────────────────────── */
+
+/* ─── @theme: tells Tailwind v4 to generate utilities from these tokens ─── */
+@theme {
+  --font-sans:  var(--font-inter),  system-ui, sans-serif;
+  --font-serif: var(--font-lora),   Georgia, "Times New Roman", serif;
+
+  /* Avocado green scale ─────────────────────────────────────────────────── */
+  --color-green-50:  #edf2dc;   /* barely-there sage tint, like fresh parchment */
+  --color-green-100: #d5e6ae;   /* pale sage wash                               */
+  --color-green-200: #b6d47e;   /* light avocado                                */
+  --color-green-300: #90be50;   /* avocado flesh                                */
+  --color-green-400: #6aac25;   /* avocado skin — core 70s colour               */
+  --color-green-500: #518a16;   /* deep herb garden                             */
+  --color-green-600: #447514;   /* dark avocado                                 */
+  --color-green-700: #3b6810;   /* deep moss / forest floor                     */
+  --color-green-800: #376113;   /* rich earthy forest (button resting)          */
+  --color-green-900: #336516;   /* brand primary (hover / logo text)            */
+  --color-green-950: #1f3d0a;   /* near-black earth                             */
+}
+
+/* ─── Hard override: un-layered :root beats @layer theme (Tailwind v4) ──── *
+ *  Tailwind puts its defaults inside @layer theme { :root { … } }.          *
+ *  Un-layered custom properties always win over a cascade layer.            *
+ * ──────────────────────────────────────────────────────────────────────── */
+:root {
+  /* Surfaces */
+  --background: #f5f1e4;   /* warm antique cream — aged parchment               */
+  --foreground: #1e1b12;   /* very dark warm brown-black, not pure #000         */
+
+  /* Avocado greens (duplicate of @theme so the values actually take effect) */
+  --color-green-50:  #edf2dc;
+  --color-green-100: #d5e6ae;
+  --color-green-200: #b6d47e;
+  --color-green-300: #90be50;
+  --color-green-400: #6aac25;
+  --color-green-500: #518a16;
+  --color-green-600: #447514;
+  --color-green-700: #3b6810;
+  --color-green-800: #376113;
+  --color-green-900: #336516;
+  --color-green-950: #1f3d0a;
+}
+
+/* ─── Base typography ─────────────────────────────────────────────────────── */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-lora), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Slider — brand avocado thumb ────────────────────────────────────────── */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+}
+input[type="range"]::-webkit-slider-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #c5bca8;   /* warm stone track */
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-green-900);   /* #336516 brand */
+  border: 3px solid #f5f1e4;            /* matches body background */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  margin-top: -8px;
+}
+input[type="range"]:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--color-green-900);
+  outline-offset: 2px;
+}
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #c5bca8;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-green-900);
+  border: 3px solid #f5f1e4;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ─── Scrollbar — warm earth tones ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #c5bca8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a090;
+}

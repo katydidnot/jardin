@@ -1,0 +1,310 @@
+[
+  {
+    "id": "tc_001",
+    "description": "Brittany coast, France — high pollinator priority",
+    "input": {
+      "location": {
+        "latitude": 48.1173,
+        "longitude": -1.6778,
+        "country_code": "FR",
+        "place_name": "Rennes, Brittany, France"
+      },
+      "priorities": {
+        "pollinators": 0.9,
+        "insects": 0.5,
+        "soil": 0.3,
+        "environment": 0.4,
+        "food_utility": 0.2,
+        "size": 0.3
+      },
+      "notes": "Atlantic climate, cool summers, mild winters. Mixed garden with lawn and borders."
+    },
+    "expected_top_genera": ["Echium", "Lavandula", "Borago", "Salvia", "Phacelia", "Centaurea", "Knautia"],
+    "must_not_include_genera": ["Quercus", "Fagus", "Pinus"],
+    "quality_criteria": [
+      "At least 3 of the top 5 species should have pollinator_score >= 0.7",
+      "All recommended species should be plausibly native or naturalised in Atlantic France",
+      "Species descriptions should mention pollinators, bees, or butterflies"
+    ]
+  },
+  {
+    "id": "tc_002",
+    "description": "Yorkshire Dales, UK — high insect host priority",
+    "input": {
+      "location": {
+        "latitude": 54.2919,
+        "longitude": -2.0022,
+        "country_code": "GB",
+        "place_name": "Yorkshire Dales, North Yorkshire, England"
+      },
+      "priorities": {
+        "pollinators": 0.4,
+        "insects": 0.9,
+        "soil": 0.5,
+        "environment": 0.5,
+        "food_utility": 0.1,
+        "size": 0.3
+      },
+      "notes": "Upland limestone grassland, cool temperatures. Rewilding corner of a farm garden."
+    },
+    "expected_top_genera": ["Viola", "Primula", "Thymus", "Potentilla", "Geranium", "Campanula", "Filipendula"],
+    "must_not_include_genera": ["Eucalyptus", "Agave", "Opuntia"],
+    "quality_criteria": [
+      "At least 3 of the top 5 species should have insect_host_score >= 0.65",
+      "Recommendations should be suitable for upland/limestone conditions",
+      "Agent reasoning should reference insect host plants or caterpillar food plants"
+    ]
+  },
+  {
+    "id": "tc_003",
+    "description": "Bavaria, Germany — soil health focus",
+    "input": {
+      "location": {
+        "latitude": 48.1351,
+        "longitude": 11.5820,
+        "country_code": "DE",
+        "place_name": "Munich, Bavaria, Germany"
+      },
+      "priorities": {
+        "pollinators": 0.3,
+        "insects": 0.3,
+        "soil": 0.9,
+        "environment": 0.5,
+        "food_utility": 0.2,
+        "size": 0.3
+      },
+      "notes": "Continental climate. Clay-heavy soil needing improvement. Vegetable garden companion planting."
+    },
+    "expected_top_genera": ["Lupinus", "Trifolium", "Medicago", "Phacelia", "Borago", "Tanacetum", "Achillea"],
+    "must_not_include_genera": ["Allium", "Solanum"],
+    "quality_criteria": [
+      "At least 3 of the top 5 species should have soil_benefit_score >= 0.65",
+      "Nitrogen-fixing or deep-rooted species should appear prominently",
+      "Agent reasoning should reference soil improvement, nitrogen fixation, or root depth"
+    ]
+  },
+  {
+    "id": "tc_004",
+    "description": "Netherlands coastal dunes — environmental resilience",
+    "input": {
+      "location": {
+        "latitude": 52.3676,
+        "longitude": 4.9041,
+        "country_code": "NL",
+        "place_name": "Amsterdam, North Holland, Netherlands"
+      },
+      "priorities": {
+        "pollinators": 0.4,
+        "insects": 0.4,
+        "soil": 0.4,
+        "environment": 0.9,
+        "food_utility": 0.1,
+        "size": 0.3
+      },
+      "notes": "Sandy coastal soil, wind-exposed. Focus on erosion control and climate adaptation."
+    },
+    "expected_top_genera": ["Hippophae", "Rosa", "Ammophila", "Salix", "Leymus", "Calamagrostis", "Festuca"],
+    "must_not_include_genera": ["Tropaeolum", "Impatiens"],
+    "quality_criteria": [
+      "At least 3 of the top 5 species should have environmental_score >= 0.65",
+      "Recommendations should be suitable for sandy or coastal conditions",
+      "Agent reasoning should mention wind tolerance, erosion control, or resilience"
+    ]
+  },
+  {
+    "id": "tc_005",
+    "description": "Connemara, Ireland — food and medicinal utility",
+    "input": {
+      "location": {
+        "latitude": 53.4779,
+        "longitude": -9.9318,
+        "country_code": "IE",
+        "place_name": "Clifden, Connemara, Galway, Ireland"
+      },
+      "priorities": {
+        "pollinators": 0.3,
+        "insects": 0.2,
+        "soil": 0.3,
+        "environment": 0.3,
+        "food_utility": 0.9,
+        "size": 0.3
+      },
+      "notes": "Atlantic bog edge. Cottage garden with interest in edible plants and traditional herbal uses."
+    },
+    "expected_top_genera": ["Fragaria", "Rubus", "Sambucus", "Urtica", "Rumex", "Achillea", "Mentha"],
+    "must_not_include_genera": ["Digitalis", "Taxus", "Aconitum"],
+    "quality_criteria": [
+      "At least 4 of the top 5 species should have food_utility_score >= 0.6",
+      "food_utility_notes should be present for top-ranked species",
+      "At least 2 species should have explicit edible or medicinal uses described"
+    ]
+  },
+  {
+    "id": "tc_006",
+    "description": "Andalusia, Spain — balanced high priorities across all dimensions",
+    "input": {
+      "location": {
+        "latitude": 37.3891,
+        "longitude": -5.9845,
+        "country_code": "ES",
+        "place_name": "Seville, Andalusia, Spain"
+      },
+      "priorities": {
+        "pollinators": 0.8,
+        "insects": 0.8,
+        "soil": 0.8,
+        "environment": 0.8,
+        "food_utility": 0.7,
+        "size": 0.5
+      },
+      "notes": "Mediterranean climate, hot dry summers. Drought-tolerant planting with water-wise design."
+    },
+    "expected_top_genera": ["Lavandula", "Rosmarinus", "Cistus", "Salvia", "Thymus", "Foeniculum", "Origanum"],
+    "must_not_include_genera": ["Ageratum", "Impatiens", "Begonia"],
+    "quality_criteria": [
+      "Recommendations should be drought-tolerant or Mediterranean natives",
+      "Average final_score of top 5 should exceed 0.60",
+      "No obvious garden bedding plants that are non-native to the region should appear in top 5"
+    ]
+  },
+  {
+    "id": "tc_007",
+    "description": "Swedish Lapland — balanced modest priorities, subarctic conditions",
+    "input": {
+      "location": {
+        "latitude": 67.8558,
+        "longitude": 20.2253,
+        "country_code": "SE",
+        "place_name": "Kiruna, Norrbotten, Sweden"
+      },
+      "priorities": {
+        "pollinators": 0.5,
+        "insects": 0.5,
+        "soil": 0.5,
+        "environment": 0.5,
+        "food_utility": 0.5,
+        "size": 0.5
+      },
+      "notes": "Subarctic climate, permafrost nearby. Short growing season, acidic soils. Naturalistic planting."
+    },
+    "expected_top_genera": ["Betula", "Salix", "Vaccinium", "Empetrum", "Dryas", "Epilobium", "Calluna"],
+    "must_not_include_genera": ["Olea", "Citrus", "Lavandula"],
+    "quality_criteria": [
+      "All recommendations should plausibly survive subarctic winters (USDA zone 3 or colder)",
+      "Mediterranean or heat-requiring species must not appear in top 10",
+      "At least 2 species should be characteristic of boreal or arctic-alpine flora"
+    ]
+  },
+  {
+    "id": "tc_008",
+    "description": "Scottish Highlands — extreme pollinator focus",
+    "input": {
+      "location": {
+        "latitude": 57.4778,
+        "longitude": -4.2247,
+        "country_code": "GB",
+        "place_name": "Inverness, Highland, Scotland"
+      },
+      "priorities": {
+        "pollinators": 1.0,
+        "insects": 0.2,
+        "soil": 0.1,
+        "environment": 0.2,
+        "food_utility": 0.0,
+        "size": 0.2
+      },
+      "notes": "Upland Scottish climate with heather moorland nearby. Dedicated pollinator garden."
+    },
+    "expected_top_genera": ["Calluna", "Erica", "Digitalis", "Scabiosa", "Knautia", "Echium", "Borago"],
+    "must_not_include_genera": ["Allium", "Petroselinum"],
+    "quality_criteria": [
+      "Top 5 species should all have pollinator_score >= 0.70",
+      "Scoring should heavily favour pollinator dimension given weight of 1.0",
+      "Heathland or upland-compatible species should feature prominently"
+    ]
+  },
+  {
+    "id": "tc_009",
+    "description": "Alsace, France — soil-only focus with near-zero other priorities",
+    "input": {
+      "location": {
+        "latitude": 48.5734,
+        "longitude": 7.7521,
+        "country_code": "FR",
+        "place_name": "Strasbourg, Alsace, France"
+      },
+      "priorities": {
+        "pollinators": 0.05,
+        "insects": 0.05,
+        "soil": 1.0,
+        "environment": 0.05,
+        "food_utility": 0.05,
+        "size": 0.1
+      },
+      "notes": "Continental climate. Heavy clay soil. Fruit orchard underplanting with soil-building cover."
+    },
+    "expected_top_genera": ["Lupinus", "Vicia", "Medicago", "Trifolium", "Phacelia", "Borago", "Sinapis"],
+    "must_not_include_genera": ["Taxus", "Conium"],
+    "quality_criteria": [
+      "Top 5 species should all have soil_benefit_score >= 0.65",
+      "The soil dimension should visibly dominate the final_score calculation",
+      "Agent reasoning for soil agent should provide detailed justification for each species"
+    ]
+  },
+  {
+    "id": "tc_010",
+    "description": "Belgian Ardennes — pollinators + food utility combined",
+    "input": {
+      "location": {
+        "latitude": 50.2272,
+        "longitude": 5.3677,
+        "country_code": "BE",
+        "place_name": "Bastogne, Wallonia, Belgium"
+      },
+      "priorities": {
+        "pollinators": 0.8,
+        "insects": 0.3,
+        "soil": 0.2,
+        "environment": 0.3,
+        "food_utility": 0.8,
+        "size": 0.3
+      },
+      "notes": "Cool temperate, mixed forest edge. Productive garden with forager interest and pollinator value."
+    },
+    "expected_top_genera": ["Sambucus", "Rubus", "Fragaria", "Borago", "Phacelia", "Lavandula", "Echium"],
+    "must_not_include_genera": ["Aconitum", "Conium", "Taxus"],
+    "quality_criteria": [
+      "Top 5 species should have both pollinator_score >= 0.55 AND food_utility_score >= 0.55",
+      "Species with dual pollinator+food value should rank highest",
+      "food_utility_notes should be present for at least 3 of the top 5 species"
+    ]
+  },
+  {
+    "id": "tc_011",
+    "description": "Paris, France — compact balcony and container garden, small-space fit",
+    "input": {
+      "location": {
+        "latitude": 48.8566,
+        "longitude": 2.3522,
+        "country_code": "FR",
+        "place_name": "Paris, Île-de-France, France"
+      },
+      "priorities": {
+        "pollinators": 0.5,
+        "insects": 0.3,
+        "soil": 0.2,
+        "environment": 0.3,
+        "food_utility": 0.4,
+        "size": 1.0
+      },
+      "notes": "Urban balcony garden in pots and window boxes. Maximum space 2 m² total. No large shrubs or trees — compact, clump-forming, or trailing species only."
+    },
+    "expected_top_genera": ["Thymus", "Fragaria", "Viola", "Mentha", "Origanum", "Sedum", "Armeria"],
+    "must_not_include_genera": ["Quercus", "Fagus", "Corylus", "Alnus", "Betula", "Salix"],
+    "quality_criteria": [
+      "No large trees or vigorous spreading shrubs should appear in the top 10 recommendations",
+      "The size score_breakdown value for top-5 species should be >= 0.65, reflecting compact or container suitability",
+      "Agent reasoning for the size dimension should explicitly reference container suitability, compact growth, or small-space fitness"
+    ]
+  }
+]

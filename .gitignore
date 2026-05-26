@@ -1,0 +1,57 @@
+# ── Environment ────────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Python ─────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Virtual environments ────────────────────────────────────────────────────────
+backend/.venv/
+.venv/
+venv/
+ENV/
+
+# ── Node / Next.js ──────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+node_modules/
+.next/
+
+# ── Database ────────────────────────────────────────────────────────────────────
+*.db
+*.sqlite3
+
+# ── Jardin runtime output ───────────────────────────────────────────────────────
+backend/traces/
+evals/reports/
+
+# ── IDE / editors ───────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.suo
+*.user
+.DS_Store
+Thumbs.db
+
+# ── Logs ───────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Docker ─────────────────────────────────────────────────────────────────────
+# (compose override files are machine-specific)
+docker-compose.override.yml
